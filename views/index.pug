@@ -5,3 +5,11 @@ block content
   p Welcome to #{title} . This is a heroku server hosted locally.
 
   button(type='button', class='btn btn-secondary') Press Me 
+  div(id = 'target' onClick = 'update()') Display
+  
+  script.
+    var client_count = 0;
+    function update() {
+      client_count++
+      document.getElementById("target").innerHTML = `Value now ${client_count}`
+    };
