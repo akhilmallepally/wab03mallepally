@@ -5,20 +5,24 @@ block content
   
   div(class = "container-fluid")
       div(class = 'row')
-          -
-            let vegetables = {
-                {
-                    "company": "Air Greenland",
-                    "headquarters": "",
-                    "established year": ""
-                },{
-                    "company": "",
-                    "headquarters": "",
-                    "established date": ""
-                },
-                {
-                    "company": "",
-                    "headquarters": "",
-                    "established date": ""
-                }
-            }
+            -
+                let helicopter = [
+                    {
+                        "company": "Air Greenland",
+                        "headquarters": "Nuussuaq",
+                        "established_year": "1960"
+                    },{
+                        "company": "Air Harrods",
+                        "headquarters": "London",
+                        "established_date": "1996"
+                    },
+                    {
+                        "company": "Bristow Helicopters",
+                        "headquarters": "Houston",
+                        "established_date": "1955"
+                    }
+                ]
+            each heli in helicopter
+                div(class= "col-sm-2") #{heli.company}
+                div(class= "col-sm-2") #{heli.headquarters}
+                div(class= "col-sm-2") #{heli.established_date}
